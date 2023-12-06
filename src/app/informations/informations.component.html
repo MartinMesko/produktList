@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="infoWrapper">
+    <div class="productStyler">
+      <div class="headerStyler">
+        <hr>
+        <h1><ng-content select="[productName]"></ng-content> </h1>
+        <h2><ng-content select="[productCategory]"></ng-content> </h2>
+      </div>
+      <div class="main">
+        <h2><ng-content select="[productPrice]"></ng-content> </h2>
+        <h4><ng-content select="[productStock]"></ng-content> </h4>
+        <h2>Description</h2>
+        <p><ng-content select="[productDescription]"></ng-content> </p>
+        <hr>
+        <div class="vendors">
+          <div><strong>Predávajúci: </strong></div>
+          <div><ng-content select="[productVendors]"></ng-content></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

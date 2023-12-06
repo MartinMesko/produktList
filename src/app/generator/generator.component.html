@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="generatorWrapper" *ngFor="let product of productList">
+    <app-informations>
+      <span productName>{{product["name"]}}</span>
+      <span productCategory><strong>Kategória : </strong>{{product["productCategory"]}}</span>
+      <span productPrice *ngIf="!(product.price === 0)">{{product["price"]}}</span>
+      <ng-container productStock>
+        <span *ngIf="!(product.stock === 0)">{{product["stock"]}} ks</span>
+        <span *ngIf="(product.stock === 0)" class="red">Nedostupný</span>
+      </ng-container>
+
+      <span productDescription *ngIf="!(product.description.length === 0)"><strong>Popis : </strong>{{product["description"]}}</span>
+      <ng-container productVendors *ngFor="let vendor of product.vendors">
+        <div *ngIf="!(vendor.vendorStock === 0)">
+            <span>{{vendor.vendorName}} : {{vendor.vendorStock}} ks</span>
+        </div>
+      </ng-container>
+
+
+    </app-informations>
+  </div>
+</body>
+</html>

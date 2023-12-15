@@ -1,0 +1,8 @@
+<div class="reviewWrapper">
+  <h2>Recenzie: </h2>
+  <ul>
+    <li *ngFor="let review of reviews">{{review}}</li>
+  </ul>
+  <input [(ngModel)]="newReview">
+  <button (click)="addReview(newReview)">Pridaj recenziu</button>
+</div>

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Data} from "@angular/router";
 
 @Component({
   selector: 'app-generator',
@@ -9,6 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 export class GeneratorComponent implements OnInit{
 
   productList: any[];
+  posledneRecenzie: {text: string, timestamp: Date} | null = null;
 
   constructor(
     private router : ActivatedRoute
@@ -27,7 +28,8 @@ export class GeneratorComponent implements OnInit{
             { vendorName: 'TCOM', vendorStock: 0 },
             { vendorName: 'Orange', vendorStock: 0 },
             { vendorName: 'O2', vendorStock: 0 }
-          ]
+          ],
+          reviews: ['Výborný']
         },
         {
           name: 'iPhone 13',
@@ -39,7 +41,8 @@ export class GeneratorComponent implements OnInit{
             { vendorName: 'iStore', vendorStock: 0},
             { vendorName: 'TCOM', vendorStock: 3 },
             { vendorName: 'Orange', vendorStock: 0 }
-          ]
+          ],
+          reviews: ['Niet čo vytknúť']
         },
         {
           name: 'Xiaomi Redmi Note',
@@ -51,7 +54,8 @@ export class GeneratorComponent implements OnInit{
             { vendorName: 'TCOM', vendorStock: 4 },
             { vendorName: '4ka', vendorStock: 4 },
             { vendorName: 'Orange', vendorStock: 4 }
-          ]
+          ],
+          reviews: ['Slabý výkon']
         },
         {
           name: 'Huawei P40',
@@ -63,7 +67,8 @@ export class GeneratorComponent implements OnInit{
             { vendorName: 'TCOM', vendorStock: 3 },
             { vendorName: '4ka', vendorStock: 2 },
             { vendorName: 'O2', vendorStock: 3 }
-          ]
+          ],
+          reviews: ['Zlá kvalita', 'Neodporúčam']
         },
         {
           name: 'OnePlus 9',
@@ -75,7 +80,8 @@ export class GeneratorComponent implements OnInit{
             { vendorName: 'TCOM', vendorStock: 2 },
             { vendorName: 'Orange', vendorStock: 2 },
             { vendorName: 'O2', vendorStock: 2 }
-          ]
+          ],
+          reviews: ['Neodporúčam']
         }
       ];
       this.calculateStock();
@@ -86,4 +92,11 @@ export class GeneratorComponent implements OnInit{
       product.stock = product.vendors.reduce((totalStock, vendor) => totalStock + vendor.vendorStock, 0);
     });
   }
+
+  lastReviews(text: string): void {
+    this.posledneRecenzie = { text: text, timestamp: new Date() };
+  }
+
+
+
 }

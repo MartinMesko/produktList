@@ -14,10 +14,20 @@
   <p>{{ posledneRecenzie.timestamp | date:'medium' }}</p>
 </div>
 
+<div class="filter">
+  <h1>Filter produktov</h1>
+  <app-app-filter [productList]="productList" (filteredList)="handleFilter($event)">
+    <app-app-filter-options></app-app-filter-options>
+  </app-app-filter>
+</div>
+
+
 <div class="generatorWrapper" *ngFor="let product of productList">
   <app-informations [data]="product"></app-informations>
   <app-reviews [reviews]="product.reviews" (reviewAdded)="lastReviews($event)"></app-reviews>
 </div>
+
+
 
 </body>
 </html>

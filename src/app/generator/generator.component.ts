@@ -97,6 +97,7 @@ export class GeneratorComponent implements OnInit{
     this.posledneRecenzie = { text: text, timestamp: new Date() };
   }
 
-
-
+  handleFilter(filterProducts: any[]): void {
+    this.productList = filterProducts;
+  }
 }

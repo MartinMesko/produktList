@@ -8,14 +8,14 @@
   <title>Document</title>
 </head>
 <body>
-<h2>Posledná recenzia</h2>
+<h2>The last review</h2>
 <div *ngIf="posledneRecenzie">
   <p>{{ posledneRecenzie.text }}</p>
   <p>{{ posledneRecenzie.timestamp | date:'medium' }}</p>
 </div>
 
 <div class="filter">
-  <h1>Filter produktov</h1>
+  <h1>Filter of products</h1>
   <app-app-filter [productList]="productList" (filteredList)="handleFilter($event)">
     <app-app-filter-options></app-app-filter-options>
   </app-app-filter>

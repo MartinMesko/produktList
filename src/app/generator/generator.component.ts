@@ -26,13 +26,13 @@ export class GeneratorComponent implements OnInit{
           productCategory: 'Phone',
           price: '250€',
           stock: 0,
-          description: 'Vysokorýchlostný a výkonný smartfón s vynikajúcou kvalitou displeja a výdržou batérie. Ideálny pre multimédiá a hry.',
+          description: 'High-speed and powerful smartphone with excellent display quality and battery life. Ideal for multimedia and games.',
           vendors: [
             { vendorName: 'TCOM', vendorStock: 0 },
             { vendorName: 'Orange', vendorStock: 0 },
             { vendorName: 'O2', vendorStock: 0 }
           ],
-          reviews: ['Výborný']
+          reviews: ['Excellent']
         },
         {
           id: 2,
@@ -40,13 +40,13 @@ export class GeneratorComponent implements OnInit{
           productCategory: 'Phone',
           price: '800€',
           stock: 0,
-          description: 'Prémiový telefón s pokročilou kamerou a vysokým výkonom. Elegantný dizajn a robustná konštrukcia.',
+          description: 'Premium phone with advanced camera and high performance. Elegant design and robust construction.',
           vendors: [
             { vendorName: 'iStore', vendorStock: 0},
             { vendorName: 'TCOM', vendorStock: 3 },
             { vendorName: 'Orange', vendorStock: 0 }
           ],
-          reviews: ['Niet čo vytknúť']
+          reviews: ['Nothing to fault']
         },
         {
           id: 3,
@@ -54,13 +54,13 @@ export class GeneratorComponent implements OnInit{
           productCategory: 'Phone',
           price: '150€',
           stock: 0,
-          description: 'Cenovo dostupný telefón s dobrou výdržou batérie a kvalitným fotoaparátom. Ideálny pre bežné používanie.',
+          description: 'Affordable phone with good battery life and quality camera. Ideal for everyday use.',
           vendors: [
             { vendorName: 'TCOM', vendorStock: 4 },
             { vendorName: '4ka', vendorStock: 4 },
             { vendorName: 'Orange', vendorStock: 4 }
           ],
-          reviews: ['Slabý výkon']
+          reviews: ['Weak performance']
         },
         {
           id: 4,
@@ -68,13 +68,13 @@ export class GeneratorComponent implements OnInit{
           productCategory: 'Phone',
           price: '300€',
           stock: 0,
-          description: 'Telefón s vynikajúcim výkonom a fototechnikou. Atraktívny dizajn a dlhodobá výdrž na jedno nabitie.',
+          description: 'Phone with excellent performance and photography. Attractive design and long-lasting battery life on a single charge.',
           vendors: [
             { vendorName: 'TCOM', vendorStock: 3 },
             { vendorName: '4ka', vendorStock: 2 },
             { vendorName: 'O2', vendorStock: 3 }
           ],
-          reviews: ['Zlá kvalita', 'Neodporúčam']
+          reviews: ['Poor quality', 'Not recommended']
         },
         {
           id: 5,
@@ -82,13 +82,13 @@ export class GeneratorComponent implements OnInit{
           productCategory: 'Phone',
           price: '500€',
           stock: 0,
-          description: 'Telefón so špičkovým výkonom a hladkým 120Hz displejom. Výborné fotografické schopnosti a rýchle nabíjanie.',
+          description: 'Phone with top-notch performance and a smooth 120Hz display. Excellent photographic capabilities and fast charging.',
           vendors: [
             { vendorName: 'TCOM', vendorStock: 2 },
             { vendorName: 'Orange', vendorStock: 2 },
             { vendorName: 'O2', vendorStock: 2 }
           ],
-          reviews: ['Neodporúčam']
+          reviews: ['Not recommended']
         }
       ];
       this.calculateStock();

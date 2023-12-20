@@ -14,13 +14,13 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService // Injektujte ProductService
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
-      this.product = this.productService.getProductById(this.id); // Použite ProductService na načítanie produktu
+      this.product = this.productService.getProductById(this.id);
     });
   }
 }

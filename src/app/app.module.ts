@@ -9,6 +9,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import {FormsModule} from "@angular/forms";
 import { AppFilterComponent } from './app-filter/app-filter.component';
 import { AppFilterOptionsComponent } from './app-filter-options/app-filter-options.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppFilterOptionsComponent } from './app-filter-options/app-filter-optio
     InformationsComponent,
     ReviewsComponent,
     AppFilterComponent,
-    AppFilterOptionsComponent
+    AppFilterOptionsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

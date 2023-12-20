@@ -1,0 +1,18 @@
+<!-- Tlačidlo na navigáciu späť do zoznamu produktov -->
+<button [routerLink]="'/home'">Späť na zoznam produktov</button>
+
+<!-- Kontajner pre zobrazenie detailov produktu, ak je produkt definovaný -->
+<ng-container *ngIf="product">
+  <!-- Zobrazenie názvu produktu -->
+  <h2>{{ product.name }}</h2>
+  <!-- Zobrazenie ďalších vlastností produktu -->
+  <p>Kategória: {{ product.productCategory }}</p>
+  <p>Cena: {{ product.price }}</p>
+  <p>Popis: {{ product.description }}</p>
+  <!-- V prípade, že máte ďalšie vlastnosti na zobrazenie, pridajte ich sem -->
+</ng-container>
+
+<!-- Ak produkt nie je definovaný, zobraziť správu o chybe alebo pokyn -->
+<div *ngIf="!product">
+  <p>Produkt s ID {{ id }} nebol nájdený.</p>
+</div>

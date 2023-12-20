@@ -10,6 +10,8 @@ export class GeneratorComponent implements OnInit{
 
   productList: any[];
   posledneRecenzie: {text: string, timestamp: Date} | null = null;
+  selectedProduct: any;
+
 
   constructor(
     private router : ActivatedRoute
@@ -19,6 +21,7 @@ export class GeneratorComponent implements OnInit{
 
       this.productList = [
         {
+          id: 1,
           name: 'Samsung Galaxy',
           productCategory: 'Phone',
           price: '250€',
@@ -32,6 +35,7 @@ export class GeneratorComponent implements OnInit{
           reviews: ['Výborný']
         },
         {
+          id: 2,
           name: 'iPhone 13',
           productCategory: 'Phone',
           price: '800€',
@@ -45,6 +49,7 @@ export class GeneratorComponent implements OnInit{
           reviews: ['Niet čo vytknúť']
         },
         {
+          id: 3,
           name: 'Xiaomi Redmi Note',
           productCategory: 'Phone',
           price: '150€',
@@ -58,6 +63,7 @@ export class GeneratorComponent implements OnInit{
           reviews: ['Slabý výkon']
         },
         {
+          id: 4,
           name: 'Huawei P40',
           productCategory: 'Phone',
           price: '300€',
@@ -71,6 +77,7 @@ export class GeneratorComponent implements OnInit{
           reviews: ['Zlá kvalita', 'Neodporúčam']
         },
         {
+          id: 5,
           name: 'OnePlus 9',
           productCategory: 'Phone',
           price: '500€',
@@ -86,6 +93,14 @@ export class GeneratorComponent implements OnInit{
       ];
       this.calculateStock();
 
+  }
+
+  selectProduct(id: number): void {
+    this.selectedProduct = this.getProductById(id);
+  }
+
+  getProductById(id: number) {
+    return this.productList.find(product => product.id === id)
   }
   calculateStock(): void {
     this.productList.forEach(product => {

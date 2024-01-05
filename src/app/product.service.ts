@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {BehaviorSubject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -77,9 +78,22 @@ export class ProductService {
     }
   ];
 
+  private inStockSource = new BehaviorSubject<boolean>(false);
+  inStock$ = this.inStockSource.asObservable();
+
   constructor() {}
 
   getProductById(id: number) {
     return this.productList.find(product => product.id === id);
   }
+
+  getProducts() {
+    return this.productList;
+  }
+
+  setInStock(value: boolean) {
+    this.inStockSource.next(value);
+  }
+
+
 }

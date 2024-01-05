@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav style="background-color: aliceblue" #drawer class="sidenav" fixedInViewport
+               [attr.role]="'dialog'"
+               [mode]="'over'"
+               [opened]="false">
+    <mat-toolbar>Produkty</mat-toolbar>
+    <mat-nav-list>
+      <button routerLinkActive="active" routerLink="home">Home</button>
+      <br>
+      <br>
+      <button routerLinkActive="active" routerLink="profile">Profile</button>
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: silver">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span>Menu</span>
+    </mat-toolbar>
+
+    <!-- Tu sa zobrazí obsah z router-outlet, teda všetky komponenty vašej aplikácie -->
+    <h1><strong>Products list</strong></h1>
+<!--    <button routerLinkActive="active" routerLink="profile">Profile</button>-->
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,6 +1,7 @@
 <button [routerLink]="'/home'">Back to product list</button>
 
 <ng-container *ngIf="product">
+
   <h2>{{ product.name }}</h2>
   <p>Category: {{ product.productCategory }}</p>
   <p>Price: {{ product.price }}</p>

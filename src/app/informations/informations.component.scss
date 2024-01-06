@@ -1,0 +1,18 @@
+.infoWrapper {
+  max-width: 400px; // alebo iná vhodná šírka
+  margin: 20px auto; // odsadenie pre estetiku
+  // pridajte ďalšie štyly podľa potreby
+}
+
+// pridajte špecifické štýly pre rôzne časti karty
+.mat-card-title {
+  font-size: 1.5em;
+  // iné štyly
+}
+
+.mat-card-subtitle {
+  font-size: 1.2em;
+  // iné štyly
+}
+
+// prípadne špecifické štýly pre ceny, popisy atď.

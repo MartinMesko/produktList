@@ -1,46 +1,35 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-<div class="infoWrapper">
+<mat-card class="infoWrapper">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>{{data.name}}</h1>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <h2>Category: {{data.productCategory}}</h2>
+    </mat-card-subtitle>
+  </mat-card-header>
 
-  <div class="coordinates">X: {{ positionX }}, Y: {{ positionY }}</div>
+  <mat-card-content>
+    <div class="coordinates">X: {{ positionX }}, Y: {{ positionY }}</div>
 
-  <div class="productStyler">
+    <h2><span *ngIf="!(data.price === 0)">{{data.price}}</span></h2>
+    <h4>
+      <span *ngIf="!(data.stock === 0)">{{data.stock}} pcs</span>
+      <span *ngIf="(data.stock === 0)" class="red">Unavailable</span>
+    </h4>
 
-    <div class="headerStyler">
-      <hr>
-      <h1><span>{{data.name}}</span></h1>
-      <h2><span><strong>Category: </strong>{{data.productCategory}}</span></h2>
-    </div>
+    <h2>Description</h2>
+    <span *ngIf="!(data.description.length === 0)">
+      <strong>Description: </strong>{{data.description}}
+    </span>
+    <hr>
 
-    <div class="main">
-      <h2><span *ngIf="!(data.price === 0)">{{data.price}}</span></h2>
-      <h4><span *ngIf="!(data.stock === 0)">{{data.stock}} pcs</span>
-        <span *ngIf="(data.stock === 0)" class="red">Unavailable</span></h4>
-
-      <h2>Description</h2>
-      <span *ngIf="!(data.description.length === 0)"><strong>Description: </strong>{{data.description}}</span>
-      <hr>
-
-      <div class="vendors">
-        <div><strong>Sellers: </strong></div>
-        <div *ngFor="let vendor of data.vendors">
-          <div *ngIf="!(vendor.vendorStock === 0)">
-            <span>{{vendor.vendorName}}: {{vendor.vendorStock}} pcs</span>
-          </div>
+    <div class="vendors">
+      <div><strong>Sellers: </strong></div>
+      <div *ngFor="let vendor of data.vendors">
+        <div *ngIf="!(vendor.vendorStock === 0)">
+          <span>{{vendor.vendorName}}: {{vendor.vendorStock}} pcs</span>
         </div>
       </div>
-
     </div>
-  </div>
-</div>
-
-</body>
-</html>
+  </mat-card-content>
+</mat-card>

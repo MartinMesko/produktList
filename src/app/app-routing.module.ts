@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: 'home', component: GeneratorComponent},
   {path: 'product/:id', component: ProductDetailComponent},
   {path: 'profile', component: ProfilePageComponent},
-  {path: '**', redirectTo: 'profile', pathMatch: "full"}
+  {path: '**', redirectTo: 'home', pathMatch: "full"}
 
 
 

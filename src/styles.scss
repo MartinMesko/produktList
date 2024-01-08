@@ -1,14 +1,30 @@
-body {
+body .container{
   text-align: center;
+  background-color: antiquewhite;
+  background-size: cover;
+
+  //background-image: url("assets/obrazok.png");
+  //background-size: cover; /* pridajte toto, aby obrázok pokryl celú obrazovku */
+  //background-attachment: fixed; /* Toto fixuje obrázok */
+  //height: auto;
 
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; background-size: cover}
+body { margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: antiquewhite;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
 
 .profile-container {
   background-image: url("assets/337247.jpg");
 }
+
+
 
 
 

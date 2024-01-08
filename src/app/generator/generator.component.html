@@ -25,7 +25,7 @@
 
 
     <div class="row">
-      <div class="col-md-4" *ngFor="let product of productList">
+      <div class="col-md-3" *ngFor="let product of productList">
         <div class="card">
           <app-informations [data]="product"></app-informations>
           <app-reviews [reviews]="product.reviews" (reviewAdded)="lastReviews($event)"></app-reviews>

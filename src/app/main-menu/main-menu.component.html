@@ -4,11 +4,15 @@
                [mode]="'over'"
                [opened]="false">
     <mat-toolbar>Produkty</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list style="text-align: center">
       <button routerLinkActive="active" routerLink="home">Home</button>
       <br>
       <br>
       <button routerLinkActive="active" routerLink="profile">Profile</button>
+      <br>
+      <br>
+      <button routerLinkActive="active" routerLink="statistics">Statisctics</button>
+
 
 
     </mat-nav-list>
@@ -30,7 +34,7 @@
     <!-- Tu sa zobrazí obsah z router-outlet, teda všetky komponenty vašej aplikácie -->
     <h1><strong>Products list</strong></h1>
 <!--    <button routerLinkActive="active" routerLink="profile">Profile</button>-->
-    <router-outlet></router-outlet>
+    <router-outlet class="router"></router-outlet>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

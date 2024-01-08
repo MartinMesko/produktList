@@ -19,6 +19,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from "@angular/material/card";
+import { SalesStatisticsComponent } from './sales-statistics/sales-statistics.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -30,7 +35,8 @@ import {MatCardModule} from "@angular/material/card";
     AppFilterOptionsComponent,
     ProductDetailComponent,
     ProfilePageComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    SalesStatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,11 @@ import {MatCardModule} from "@angular/material/card";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
